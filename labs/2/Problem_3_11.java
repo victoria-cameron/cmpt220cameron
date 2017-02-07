@@ -17,11 +17,18 @@ public class Problem_3_11{
         System.out.print ("February " + year + " had 29 days.");
       }
       else 
-        System.out.print ("February " + year + " had 28 days.");
-  
-  
-  
-  
+        System.out.print ("February " + year + " had 28 days."); break;
+
+      case 3: System.out.print ("March " + year + " had 31 days."); break;
+      case 4: System.out.print ("April " + year + " had 30 days."); break;
+      case 5: System.out.print ("May " + year + " had 31 days."); break;
+      case 6: System.out.print ("June " + year + " had 30 days."); break;
+      case 7: System.out.print ("July " + year + " had 31 days."); break;
+      case 8: System.out.print ("August " + year + " had 30 days."); break;
+      case 9: System.out.print ("September " + year + " had 31 days."); break;
+      case 10: System.out.print ("October " + year + " had 30 days."); break;  
+      case 11: System.out.print ("November " + year + " had 31 days."); break;
+      case 12: System.out.print ("December " + year + " had 30 days."); break;
     }
   }
 }  
