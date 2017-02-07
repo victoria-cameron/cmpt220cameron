@@ -27,7 +27,7 @@ public class Problem_3_8{
       numb3 = numbX;	  
 	}
     //print the numbers in their new order
-    System.out.print (numb1 + numb2 + numb3);
+    System.out.print (numb1 + " " + numb2 + " " + numb3);
     }
   }
 }   
