@@ -62,7 +62,7 @@ public class Problem_3_15{
       case 1: System.out.println("Exact match: you win $10,000"); break;
       case 2: System.out.println("Match two digits: you win $3,000"); break;
       case 3: System.out.println("Match one digit: you win $1,000"); break;
-      case 4: System.out.println ("Sorry, no match");
+      case 4: System.out.println ("Sorry, no match"); break;
 	}
   }
 }
