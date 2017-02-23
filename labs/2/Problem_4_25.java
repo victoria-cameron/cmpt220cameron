@@ -1,5 +1,9 @@
-//Victoria Cameron licence plates
-
+//file: Problem_4_25.java
+//author: Victoria Cameron
+//course: CMPT 220
+//assignment: Lab 2
+//due date: February 9, 2017
+//version: 1.0
 
 public class Problem_4_25{
   public static void main(String[] args) {

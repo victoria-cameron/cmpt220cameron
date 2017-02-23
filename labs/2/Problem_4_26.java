@@ -1,4 +1,11 @@
-//Victoria Cameron changing listing 2.10 to  read all of the cents
+//file: Problem_4_26.java
+//author: Victoria Cameron
+//course: CMPT 220
+//assignment: Lab 2
+//due date: February 9, 2017
+//version: 1.0
+
+//changing listing 2.10 to  read all of the cents
 
 import java.util.Scanner;
 public class Problem_4_26{

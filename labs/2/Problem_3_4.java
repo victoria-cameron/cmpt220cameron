@@ -1,4 +1,10 @@
-//Victoria Cameron
+//file: Problem_3_4.java
+//author: Victoria Cameron
+//course: CMPT 220
+//assignment: Lab 2
+//due date: February 9, 2017
+//version: 1.0
+
 import java.util.Scanner;
 public class Problem_3_4{
   public static void main (String [] args){
