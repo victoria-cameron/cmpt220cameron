@@ -1,7 +1,7 @@
 //file: Problem_6_20.java
 //author: Victoria Cameron
 //course: CMPT 220
-//assignment:
+//assignment: Lab 4
 //due date: March 3, 2017
 //version: 1.0
 
