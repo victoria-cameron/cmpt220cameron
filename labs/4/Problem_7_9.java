@@ -10,7 +10,7 @@ public class Problem_7_9{
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     // Create array of length 10
-    double[] numbers = new double[10];
+    double[] numbers = new double[10]; 
 
     // Prompt the user to enter ten numbers
     System.out.print("Enter ten numbers: ");
@@ -20,7 +20,7 @@ public class Problem_7_9{
 
     // Display the minimum value
     System.out.println("The minimum number is: " + min(numbers));
-  }
+    }
 
     //Method min returns the smallest element in an array of double values
     public static double min(double[] array) {
@@ -29,6 +29,5 @@ public class Problem_7_9{
         if (i < min)
           min = i;
       }
-      return min;
+    return min;
     }
-}
