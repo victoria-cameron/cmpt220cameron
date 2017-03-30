@@ -8,13 +8,23 @@
 import java.util.Scanner;
 public class Problem_7_20{
   public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
 
-   Scanner input = new Scanner(System.in);
-// Make the array and get the numbers
+    // Make the array and get the numbers
     double[] numbers = new double[10];
     System.out.print("Enter ten numbers: ");
 
+    //Add numbers to the array
+    for (int i = 0; i < numbers.length ; i++)
+      numbers[i] = input.nextDouble();
 
+    // Use selectionSort on created array
+    selectionSort(numbers);
+
+    // Display the sorted numbers
+    for (double e: numbers)
+      System.out.print(e + " ");
+    System.out.println();
 
   }
 
