@@ -23,9 +23,7 @@ public class Driver_prj2{
     int date = (input.nextInt());
 
     monthWriten(month);
-    //weekdayBorn(year, month, date);
-    dayOfTheWeek(year, date, month);
-
+    System.out.println (dayOfTheWeek(year, date, month));
   }
   //Turns the number into the string of what month you were born.
   public static String monthWriten (int month){
@@ -56,7 +54,7 @@ public class Driver_prj2{
        writtenMonth = "December";
     return writtenMonth;
   }
-  public static void dayOfTheWeek(int year1, int day1, int month1){
+  public static String dayOfTheWeek(int year1, int day1, int month1){
     int a = 0; //Teller for leap year
     if (year1%4 == 0){
       if (month1 == 0)
@@ -113,8 +111,22 @@ public class Driver_prj2{
     int b = year1 / 4;
     int c = year1 + b + day1 + a;
     c = c%7;
-    System.out.println (c);
+    String weekday = new String("ERROR");
+    if (c == 1)
+      weekday = "Sunday";
+    else if (c == 2)
+      weekday = "Monday";
+    else if (c == 3)
+      weekday = "Tuesday";
+    else if (c == 4)
+      weekday = "Wednesday";
+    else if (c == 5)
+      weekday = "Thursday";
+    else if (c == 6)
+      weekday = "Friday";
+    else if (c == 7)
+      weekday = "Saturday";
 
-
+    return weekday;
   }
 }
