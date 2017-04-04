@@ -25,6 +25,10 @@ public class Driver_prj2{
       userBirthday.whensBirthday(year, month, date);
       userBirthday.monthWriten(month);
       System.out.println (userBirthday.weekday);
+
+      Zodiac userZodiac = new Zodiac();
+      userZodiac.chinese (year);
+      System.out.println (userZodiac.cZodiac);
     }
     catch (Exception ex){
     ex.printStackTrace();
