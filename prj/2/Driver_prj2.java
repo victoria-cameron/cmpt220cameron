@@ -6,24 +6,22 @@
 //version: 0.3
 
 import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Driver_prj2{
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-
-
-    System.out.print("Enter year of birth .........:=> ");
+    System.out.print("What year were you born:  ");
     int year = (input.nextInt());
-
-
-    System.out.print("Enter month of birth, as a number please ........:=> ");
+    System.out.print("Can you tell me the month you were born; as a number: ");
     int month = (input.nextInt() - 1);
-
-
-    System.out.print("Enter date of birth  ........:=> ");
+    System.out.print("Finally, what's your day of birth: ");
     int date = (input.nextInt());
-
     monthWriten(month);
-    System.out.println (dayOfTheWeek(year, date, month));
+    dayOfTheWeek(year, date, month));
+    System.out.println (whensBirthday(year, month, day));
   }
   //Turns the number into the string of what month you were born.
   public static String monthWriten (int month){
@@ -128,5 +126,21 @@ public class Driver_prj2{
       weekday = "Saturday";
 
     return weekday;
+  }
+  public static String whensBirthday(int year2, month2, day2) throws ParseException{
+    SimpleDateFormat sdf = new SimpleDateFormat ("dd/mm/yyyy");
+    Date toDay = sdf.parse("03/04/2017");
+    Date birthday = sdf.parse("03/04/2017");
+    String yourBirthday = new String("ERROR");
+    if (toDay.compareTo(birthday) > 0)
+      yourBirthday = ("your birthday has passed. Sorry we missed it, " +
+        "there's always next year though.");
+    else if (toDay.compareTo(birthday) < 0)
+      yourBirthday = ("your birthday is comming soon. That's always " +
+        "an exciting time");
+    else if (toDay.compareTo(birthday) == 0)
+      yourBirthday = ("your birthday is today! Well isn't that fantastic. " +
+        "Guess you get a special wish for this big day then");
+    return yourBirthday;
   }
 }
