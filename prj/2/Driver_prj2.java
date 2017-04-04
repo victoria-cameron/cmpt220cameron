@@ -3,7 +3,7 @@
 //course: CMPT 220
 //assignment: Project 2
 //due date: May, 2017
-//version: 0.3
+//version: 0.4
 
 import java.util.Scanner;
 import java.text.ParseException;
@@ -28,7 +28,8 @@ public class Driver_prj2{
 
       Zodiac userZodiac = new Zodiac();
       userZodiac.chinese (year);
-      System.out.println (userZodiac.cZodiac);
+      userZodiac.western (month, date);
+      System.out.println (userZodiac.wZodiac);
     }
     catch (Exception ex){
     ex.printStackTrace();

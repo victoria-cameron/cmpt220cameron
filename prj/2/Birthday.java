@@ -1,4 +1,9 @@
-
+//file: Birthday.java
+//author: Victoria Cameron
+//course: CMPT 220
+//assignment: Project 2
+//due date: May, 2017
+//version: 0.2
 
 import java.util.Scanner;
 import java.text.ParseException;
