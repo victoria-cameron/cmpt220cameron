@@ -21,6 +21,8 @@ public class Birthday{
   String writtenMonth = new String("ERROR");
   String weekday = new String("ERROR");
   SimpleDateFormat sdf = new SimpleDateFormat ("dd/mm/yyyy");
+
+  //Constructor
   public Birthday(){
   }
   //Turns the number into the string of what month you were born.
@@ -49,7 +51,6 @@ public class Birthday{
         writtenMonth = "November";
       else if (month == 11)
        writtenMonth = "December";
-
     //return writtenMonth;
   }
 
@@ -125,7 +126,6 @@ public class Birthday{
       weekday = "Friday";
     else if (c == 7)
       weekday = "Saturday";
-
     //return weekday;
   }
 
@@ -142,7 +142,6 @@ public class Birthday{
     else if (toDay.compareTo(birthday) == 0)
       yourBirthday = ("your birthday is today! Well isn't that fantastic. " +
         "Guess you get a special wish for this big day then");
-
     //return yourBirthday;
   }
 }

@@ -11,9 +11,13 @@ public class Zodiac{
   int year = 1900;
   String cZodiac = new String ("ERROR");
   String wZodiac = new String ("ERROR");
+
+  //Constructor
   public Zodiac(){
 
   }
+
+  //created the western zodiac string that will be printed
   public void western (int month, int day){
     month = month + 1;
     if ((month == 12 && day >= 22 && day <= 31) || (month ==  1 && day >= 1 && day <= 19))
@@ -44,6 +48,7 @@ public class Zodiac{
           wZodiac = ("Illegal date");
   }
 
+  //creates the chinese zodiac string to be printed.
   public void chinese (int year){
     switch (year % 12) {
       case 0: cZodiac = ("Your Chinese zodiac is a monkey." +
