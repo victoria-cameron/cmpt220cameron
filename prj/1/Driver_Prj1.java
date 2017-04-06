@@ -26,10 +26,10 @@ public class Driver_Prj1{
     }
 
     //Print the result of the convolution
-    //double[] convolved = convolveVectors (listOne, listTwo);
-    //for (int i = 0; i < lengthTwo; i++){
-    System.out.print ((convolveVectors (listOne, listTwo) + " "));
-    //}
+    double[] convolved = convolveVectors (listOne, listTwo);
+    for (int i = 0; i < lengthTwo; i++){
+      System.out.println((convolveVectors (listOne, listTwo) + " "));
+    }
 
   }
 
