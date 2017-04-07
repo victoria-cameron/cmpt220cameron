@@ -14,26 +14,28 @@ import java.util.concurrent.TimeUnit;
 public class Problem_1_3{
   public static void main(String[] args) throws ParseException{
 
-    int day = 1;
-    int month = 12;
+    String date = String.valueOf(day2);
+    String months = String.valueOf(month2);
     String year = "2017";
-    String date = String.valueOf(day);
-    String months = String.valueOf(month);
-
     String birthdayThisYear = date + " " + months +" "+ year;
 
-    String pattern = "dd MM yyy";
+    String pattern = "dd MM yyyy";
     SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
     String today = new SimpleDateFormat(pattern).format(new Date());
-    String inputString2 = birthdayThisYear;
+
+    if (today.compareTo(birthdayThisYear) > 0)
+      year = "2018";
+      String birthdayNextYear = date + " " + months + " " + year;
+
 
     try {
         Date date1 = myFormat.parse(today);
-        Date date2 = myFormat.parse(inputString2);
+        Date date2 = myFormat.parse(birthdayThisYear);
         long diff = date2.getTime() - date1.getTime();
         diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
         System.out.println ("Days: " + diff);
-    } catch (ParseException e) {
+    }
+    catch (ParseException e) {
         e.printStackTrace();
     }
 

@@ -9,6 +9,10 @@ import java.util.Scanner;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Calendar;
+import java.io.*;
+import java.util.concurrent.TimeUnit;
+
 
 public class Birthday{
   int month = 1;
@@ -17,10 +21,14 @@ public class Birthday{
   int a = 0;
   int b = 0;
   int c = 0;
+  long diff = 1;
   String yourBirthday = new String("ERROR");
   String writtenMonth = new String("ERROR");
-  String weekday = new String("ERROR");
-  SimpleDateFormat sdf = new SimpleDateFormat ("dd/mm/yyyy");
+  String weekday = new String("ERROR")
+  String birthdayThisYear = new String ("ERROR");
+  String pattern = "dd MM yyyy";
+  SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+  String today = new SimpleDateFormat(pattern).format(new Date());
 
   //Constructor
   public Birthday(){
@@ -51,7 +59,6 @@ public class Birthday{
         writtenMonth = "November";
       else if (month == 11)
        writtenMonth = "December";
-    //return writtenMonth;
   }
 
   //returns the day of the week you were born
@@ -126,22 +133,28 @@ public class Birthday{
       weekday = "Friday";
     else if (c == 7)
       weekday = "Saturday";
-    //return weekday;
   }
 
   //compares your birthday to today to tell if your birthday has passed
   public void whensBirthday(int year2, int month2, int day2) throws ParseException{
-    Date toDay = sdf.parse("04/04/2017");
-    Date birthday = sdf.parse("03/04/2017");
-    if (toDay.compareTo(birthday) > 0)
-      yourBirthday = ("your birthday has passed. Sorry we missed it, " +
-        "there's always next year though.");
-    else if (toDay.compareTo(birthday) < 0)
-      yourBirthday = ("your birthday is comming soon. That's always " +
-        "an exciting time");
-    else if (toDay.compareTo(birthday) == 0)
-      yourBirthday = ("your birthday is today! Well isn't that fantastic. " +
-        "Guess you get a special wish for this big day then");
-    //return yourBirthday;
+    month2 = month2 + 1;
+    String date = String.valueOf(day2);
+    String months = String.valueOf(month2);
+    String year = "2017";
+    birthdayThisYear = date + " " + months + " " + year;
+    String newYear = "2018";
+    if (today.compareTo(birthdayThisYear) > 0)
+      birthdayThisYear = date + " " + months + " " + "2018";
+    try {
+      Date date1 = myFormat.parse(today);
+      Date date2 = myFormat.parse(birthdayThisYear);
+      long diff = date2.getTime() - date1.getTime();
+      diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+      System.out.println ("You always have a birthday comming. You've got " +
+        diff + " days till your next special day!");
+    }
+    catch (ParseException e) {
+      e.printStackTrace();
+    }
   }
 }
