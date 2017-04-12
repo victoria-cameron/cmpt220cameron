@@ -24,7 +24,7 @@ public class Birthday{
   long diff = 1;
   String yourBirthday = new String("ERROR");
   String writtenMonth = new String("ERROR");
-  String weekday = new String("ERROR")
+  String weekday = new String("ERROR");
   String birthdayThisYear = new String ("ERROR");
   String pattern = "dd MM yyyy";
   SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
@@ -143,9 +143,10 @@ public class Birthday{
     String year = "2017";
     birthdayThisYear = date + " " + months + " " + year;
     String newYear = "2018";
-    if (today.compareTo(birthdayThisYear) > 0)
-      birthdayThisYear = date + " " + months + " " + "2018";
+
     try {
+      if (today.compareTo(birthdayThisYear) > 0)
+        birthdayThisYear = date + " " + months + " " + newYear;
       Date date1 = myFormat.parse(today);
       Date date2 = myFormat.parse(birthdayThisYear);
       long diff = date2.getTime() - date1.getTime();
