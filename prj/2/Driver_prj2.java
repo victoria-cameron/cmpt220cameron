@@ -20,15 +20,19 @@ public class Driver_prj2{
     System.out.print("Finally, what's your day of birth: ");
     int date = (input.nextInt());
     try{
+    //----------Birthday Usage-------------
       Birthday userBirthday = new Birthday();
       userBirthday.dayOfTheWeek(year, date, month);
       userBirthday.whensBirthday(year, month, date);
       userBirthday.monthWriten(month);
-      System.out.println (userBirthday.weekday);
 
+    //-----------Zodiac Usage--------------
       Zodiac userZodiac = new Zodiac();
       userZodiac.chinese (year);
       userZodiac.western (month, date);
+
+    //---------Print statements------------
+      System.out.println (userBirthday.daysTill);
       System.out.println (userZodiac.wZodiac);
     }
     catch (Exception ex){

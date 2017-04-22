@@ -1,9 +1,10 @@
+
 //file: Birthday.java
 //author: Victoria Cameron
 //course: CMPT 220
 //assignment: Project 2
 //due date: May, 2017
-//version: 0.2
+//version: 0.4
 
 import java.util.Scanner;
 import java.text.ParseException;
@@ -29,7 +30,7 @@ public class Birthday{
   String pattern = "dd MM yyyy";
   SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
   String today = new SimpleDateFormat(pattern).format(new Date());
-
+  String daysTill = new String ("ERROR");
   //Constructor
   public Birthday(){
   }
@@ -143,16 +144,16 @@ public class Birthday{
     String year = "2017";
     birthdayThisYear = date + " " + months + " " + year;
     String newYear = "2018";
-
+    //if (today.compareTo(birthdayThisYear) > 0)
+      //birthdayThisYear = date + " " + months + " " + newYear;
     try {
-      if (today.compareTo(birthdayThisYear) > 0)
-        birthdayThisYear = date + " " + months + " " + newYear;
+
       Date date1 = myFormat.parse(today);
       Date date2 = myFormat.parse(birthdayThisYear);
       long diff = date2.getTime() - date1.getTime();
       diff = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-      System.out.println ("You always have a birthday comming. You've got " +
-        diff + " days till your next special day!");
+      daysTill = "You always have a birthday comming. You've got " +
+        diff + " days till your next special day!";
     }
     catch (ParseException e) {
       e.printStackTrace();
