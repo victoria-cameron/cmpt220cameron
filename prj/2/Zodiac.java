@@ -67,7 +67,7 @@ public class Zodiac{
         "You are quick- witted, adaptable, and a very charming conversationalist.");
       break;
       case 1: cZodiac = ("Your Chinese zodiac is a rooster." +
-        "You are honest, energetic, and can sometimes be a little flampoyant");
+        "You are honest, energetic, and can sometimes be a little flampoyant.");
       break;
       case 2: cZodiac = ("Your Chinese zodiac is a dog." +
         "You are loyal, diligent, and lively.");
@@ -82,7 +82,7 @@ public class Zodiac{
         "You are loyal, thorough, and reliable.");
       break;
       case 6: cZodiac = ("Your Chinese zodiac is a tiger." +
-        "You are enthusiastic, confident, and a natural leader");
+        "You are enthusiastic, confident, and a natural leader.");
       break;
       case 7: cZodiac = ("Your Chinese zodiac is a rabbit." +
         "You are trustworthy, diplomatic, and empethetic.");

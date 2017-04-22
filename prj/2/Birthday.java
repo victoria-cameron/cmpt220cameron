@@ -31,11 +31,13 @@ public class Birthday{
   SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
   String today = new SimpleDateFormat(pattern).format(new Date());
   String daysTill = new String ("ERROR");
+  String fullDateOfBirth = new String ("ERR");
   //Constructor
   public Birthday(){
   }
   //Turns the number into the string of what month you were born.
-  public void monthWriten (int month){
+  //writtes birthday
+  public void dateOfBirth (int month, int day, int year){
     if (month == 0)
         writtenMonth = "January";
       else if (month == 1)
@@ -59,7 +61,11 @@ public class Birthday{
       else if (month == 10)
         writtenMonth = "November";
       else if (month == 11)
-       writtenMonth = "December";
+      writtenMonth = "December";
+
+      String dayS = String.valueOf(day);
+      String yearS = String.valueOf(year);
+      fullDateOfBirth = writtenMonth + " " + dayS + ", " + yearS;
   }
 
   //returns the day of the week you were born
