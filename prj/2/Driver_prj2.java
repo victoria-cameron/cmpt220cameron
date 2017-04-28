@@ -53,8 +53,22 @@ public class Driver_prj2{
       userZodiac.western (month, date);
 
     //---------Print statements------------
-      System.out.println (userBirthday.fullDateOfBirth);
-      System.out.println (userZodiac.wZodiac);
+      System.out.println ("Well "+name+", you were born on "+userBirthday.fullDateOfBirth+
+        ". A very special day in the month of "+ userBirthday.writtenMonth +
+        " giving you pretty cool western and chinese zodiacs." +
+        userZodiac.wZodiac + " Which is probably why it's so easy for people"+
+        " to be around you." + userZodiac.cZodiac +
+        " All of this paired together makes for a one of a kind person.");
+
+      System.out.println (userBirthday.fullDateOfBirth+" is also special because it falls on a "+
+        userBirthday.weekday + ". A surprisingly unpopular day to be born. "+
+        userBirthday.daysTill + " But no matter how near or far it is till your "+
+        "next one, birthdays are always special and unique when you have the" +
+        " right people to share them with.");
+
+
+
+
     }
     catch (Exception ex){
     ex.printStackTrace();
