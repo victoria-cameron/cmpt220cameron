@@ -1,3 +1,11 @@
+//file: Problem_9_1.java
+//author: Victoria Cameron
+//course: CMPT 220
+//assignment:Lab 6
+//due date: April 20, 2017
+//version: 1.0
+//Print the aria and perimater od a rectangle using a rectangle class
+
 public class Problem_9_1{
 /** Main method */
   public static void main(String[] args) {
