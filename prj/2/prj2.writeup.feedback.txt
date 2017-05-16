@@ -1,0 +1,11 @@
+38 pts
+
+The project attempts to give personality information based on user data.
+The idea has good merit. 
+
+However, there are some issues...
+Code:
+- There is incorrect indentation. -1pt
+
+Overall:
+- Decent work below average of an SD1 student. -1pt
